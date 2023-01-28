@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ISX Weather Forcast</title>
+  <link rel="icon" type="image/x-icon" href="/img/weather.png">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1 class="welcometext"> ISX Weather Forcast</h1>
+
+
+<br>
+  <div>
+    <section>
+      <h2 class=text>Location</h2>
+      <!--where the user inputs the values-->
+    <input class="searchbar" type="text" id="CityInput" 
+      placeholder="Search City">
+    </section>
+
+    <section class="display">
+      <div class="container">
+          <h2 id="City"></h2>
+          <p id="Desc"></p>
+          <p id="Temp"></p>
+          <p id="Wind"></p>
+      </div>
+    </section>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/open-weather/2.0.0/openweather.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/open-weather/2.0.0/openweather.min.js"></script>
+<script src="script.js"></script>
+
+ <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
+<br>
+<br>
+<br>
+  <footer class=footingText>Created By @9KXLLEN on GITHUB / TOMMOROW ARTS&copy.</footer>
+</body>
+
+</html>
