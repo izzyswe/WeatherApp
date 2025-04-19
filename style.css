@@ -6,7 +6,6 @@ html, body {
 }
 
 .welcometext{
-  background-color: #717980;
   color: white;
   font-family: Helvetica, san-serif;
   height: 40px;
@@ -30,12 +29,9 @@ html, body {
     box-shadow: 5px 5px 5px 0px rgba(128, 125, 125); 
 }
 
-.display{
-  /*width:800px;*/
-  /*margin:0 auto;*/
-}
-
 .text{
+  margin-top: 5vh;
+  margin-bottom: 1px;
   color: white;
   font-family: Helvetica, san-serif;
 }
@@ -46,12 +42,13 @@ html, body {
 
 .searchbar{
   text-align: center;
-  border-radius: 5px;
+  border-radius: 25px;
   width: 300px;
-  height: 40px;
+  height: 30px;
 }
 
 .footingText{
+  margin-top: 10vh;
   color: #717980;
   font-family: Helvetica, san-serif;
 }
