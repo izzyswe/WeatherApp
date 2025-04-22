@@ -1,0 +1,51 @@
+When you type in the following api link
+it will will be the following:
+https://api.openweathermap.org/data/2.5/weather?q=Toronto,CA&appid=3622b517995f3bad35120956cbecbbb3
+
+
+and this is the JSON it provides
+{
+  "coord": { 
+    "lon": -79.4163,
+    "lat": 43.7001
+  },
+  "weather": [
+    {
+      "id": 701,
+      "main": "Mist",
+      "description": "mist",
+      "icon": "50d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 280.31,
+    "feels_like": 277.6,
+    "temp_min": 278.2,
+    "temp_max": 281.68,
+    "pressure": 1010,
+    "humidity": 83,
+    "sea_level": 1010,
+    "grnd_level": 994
+  },
+  "visibility": 8047,
+  "wind": {
+    "speed": 4.12,
+    "deg": 80
+  },
+  "clouds": {
+    "all": 100 
+  },
+  "dt": 1745259903,
+  "sys": {
+    "type": 2,
+    "id": 2095531,
+    "country": "CA",
+    "sunrise": 1745231067,
+    "sunset": 1745280467
+  },
+  "timezone": -14400,
+  "id": 6167865,
+  "name": "Toronto",
+  "cod": 200
+}
