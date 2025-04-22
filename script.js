@@ -47,5 +47,11 @@ function getWeather() {
         temp.innerHTML = data.main.temp + ' °C'; //display the temperature in Celsius
         wind.innerHTML = data.wind.speed + ' m/s'; //display the wind speed in m/s
       })
+    //style the city name
+            cityOutput.style.fontSize = '3em'; //set the font size of the city name
+            cityOutput.style.fontWeight = 'bold'; //set the font weight of the city name
+            cityOutput.style.color = '#333'; //set the color of the city name
+            //cityOutput.style.textAlign = 'center'; //set the text alignment of the city name
+            //container.style.marginTop = '80px';
 }
 
