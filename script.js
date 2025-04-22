@@ -24,3 +24,18 @@ const API_Bridge = 'https://api.openweathermap.org/data/2.5/weather?q='; //API U
 const API_Unit = '&units=metric'; //API unit for temperature in Celsius
 const API_Lang = '&lang=en'; //API language for the response
 //API language for the response
+
+//function to get the weather data
+//this function will be called when the user clicks the button
+//this function will fetch the data from the API and display it on the page
+function getWeather() {
+    let city = input.value; //get the value of the input field
+    let API_Complete_Url = API_Bridge + city + API_Unit + API_Lang + '&appid=' + API_Key; //complete URL for the API request
+
+    fetch(API_Complete_Url) //fetch the data from the API
+      .then(response => response.json()) //convert the response to JSON
+      .then(data => {
+        console.log(data); //log the data to the console for debugging
+      })
+}
+
