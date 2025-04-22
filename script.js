@@ -39,8 +39,10 @@ function getWeather() {
         //Get the icon from the API response
         //Reference: https://openweathermap.org/weather-conditions
         let iconCode = data.weather[0].icon; //get the icon code from the API response  
-      
-        //Reference: https://openweathermap.org/weather-condition
+        //reference for the icon code: https://openweathermap.org/weather-conditions
+        let iconUrl = 'https://openweathermap.org/img/wn/' + iconCode + '@2x.png'; //create the URL for the icon
+        weatherIcon.src = iconUrl; //set the src of the image to the icon URL 
+        //Reference for the data: https://openweathermap.org/current#current_JSON
         cityOutput.innerHTML = data.name; //display the city name
         //set the margin top of the city name
         desc.innerHTML = data.weather[0].description; //display the weather description
@@ -62,11 +64,22 @@ function getWeather() {
         }
       })
       .catch(error => console.error('Error:', error)); //log any errors to the console
-    //style the city name
-            cityOutput.style.fontSize = '3em'; //set the font size of the city name
-            cityOutput.style.fontWeight = 'bold'; //set the font weight of the city name
-            cityOutput.style.color = '#333'; //set the color of the city name
-            //cityOutput.style.textAlign = 'center'; //set the text alignment of the city name
-            //container.style.marginTop = '80px';
+      //style the city name
+        cityOutput.style.fontSize = '3em'; //set the font size of the city name
+        cityOutput.style.fontWeight = 'bold'; //set the font weight of the city name
+        cityOutput.style.color = '#333'; //set the color of the city name
 }
+
+//add an event listener to the button
+//when the button is clicked, call the getWeather function
+//this will trigger the function to fetch the weather data
+inputBtn.addEventListener('click', getWeather); //add event listener to the button
+
+//add an event listener to the input field
+//when the user presses Enter, call the getWeather function
+input.addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') { //check if the key pressed is Enter
+        getWeather(); //call the getWeather function
+    }
+}); //add event listener to the input field
 
