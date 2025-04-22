@@ -36,6 +36,16 @@ function getWeather() {
       .then(response => response.json()) //convert the response to JSON
       .then(data => {
         console.log(data); //log the data to the console for debugging
+        //Get the icon from the API response
+        //Reference: https://openweathermap.org/weather-conditions
+        let iconCode = data.weather[0].icon; //get the icon code from the API response  
+      
+        //Reference: https://openweathermap.org/weather-condition
+        cityOutput.innerHTML = data.name; //display the city name
+        //set the margin top of the city name
+        desc.innerHTML = data.weather[0].description; //display the weather description
+        temp.innerHTML = data.main.temp + ' °C'; //display the temperature in Celsius
+        wind.innerHTML = data.wind.speed + ' m/s'; //display the wind speed in m/s
       })
 }
 
