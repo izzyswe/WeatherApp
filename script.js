@@ -46,7 +46,22 @@ function getWeather() {
         desc.innerHTML = data.weather[0].description; //display the weather description
         temp.innerHTML = data.main.temp + ' °C'; //display the temperature in Celsius
         wind.innerHTML = data.wind.speed + ' m/s'; //display the wind speed in m/s
+      //if description are certain words, change the color of the text
+        if (desc.innerHTML.includes('clear')) {
+          outerContainer.style.backgroundColor = '#FFCC00'; //set the color to yellow
+          weatherImage.src = 'https://cdn-icons-png.flaticon.com/512/1163/1163660.png'; //set the image to sunny
+        } else if (desc.innerHTML.includes('clouds')) {
+          outerContainer.style.backgroundColor = '#A0A0A0'; //set the color to gray
+          weatherImage.src = 'https://cdn-icons-png.flaticon.com/512/1163/1163660.png'; //set the image to cloudy
+        } else if (desc.innerHTML.includes('rain')|| desc.innerHTML.includes("moderate rain") || desc.innerHTML.includes('drizzle') || desc.innerHTML.includes('mist')) {
+          outerContainer.style.backgroundColor = '#00BFFF'; //set the color to blue
+        } else if (desc.innerHTML.includes('snow')) {
+          outerContainer.style.backgroundColor = '#FFFFFF'; //set the color to white
+        } else if (desc.innerHTML.includes('thunderstorm')) {
+          container.style.backgroundColor= '#FF0000'; //set the color to red
+        }
       })
+      .catch(error => console.error('Error:', error)); //log any errors to the console
     //style the city name
             cityOutput.style.fontSize = '3em'; //set the font size of the city name
             cityOutput.style.fontWeight = 'bold'; //set the font weight of the city name
